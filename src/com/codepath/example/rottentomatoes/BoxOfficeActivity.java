@@ -39,8 +39,6 @@ public class BoxOfficeActivity extends Activity {
 		setupMovieSelectedListener();
 		AppCenter.start(getApplication(), "c6396bd4-b53a-4e11-b1d6-e0448a946394",
                   Analytics.class, Crashes.class);
-AppCenter.start(getApplication(), "c6396bd4-b53a-4e11-b1d6-e0448a946394",
-                  Analytics.class, Crashes.class);
 	}
 
 	private void fetchBoxOfficeMovies() {
