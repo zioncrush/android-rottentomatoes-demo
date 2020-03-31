@@ -16,6 +16,10 @@ import android.widget.ListView;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 public class BoxOfficeActivity extends Activity {
 	private ListView lvMovies;
 	private BoxOfficeMoviesAdapter adapterMovies;
@@ -33,6 +37,10 @@ public class BoxOfficeActivity extends Activity {
 		// Fetch the data remotely
 		fetchBoxOfficeMovies();
 		setupMovieSelectedListener();
+		AppCenter.start(getApplication(), "c6396bd4-b53a-4e11-b1d6-e0448a946394",
+                  Analytics.class, Crashes.class);
+AppCenter.start(getApplication(), "c6396bd4-b53a-4e11-b1d6-e0448a946394",
+                  Analytics.class, Crashes.class);
 	}
 
 	private void fetchBoxOfficeMovies() {
