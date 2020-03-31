@@ -28,6 +28,7 @@
             android:name="com.codepath.example.rottentomatoes.BoxOfficeDetailActivity"
             android:label="@string/title_activity_box_office_detail" >
         </activity>
+        android:fullBackupContent="@xml/appcenter_backup_rule"
     </application>
 
 </manifest>
