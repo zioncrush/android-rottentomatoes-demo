@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class BoxOfficeDetailActivity extends Activity {
 	private ImageView ivPosterImage;
@@ -33,6 +36,8 @@ public class BoxOfficeDetailActivity extends Activity {
 		// Load movie data
 		BoxOfficeMovie movie = (BoxOfficeMovie) getIntent().getSerializableExtra(BoxOfficeActivity.MOVIE_DETAIL_KEY);
 		loadMovie(movie);
+		AppCenter.start(getApplication(), "c6396bd4-b53a-4e11-b1d6-e0448a946394",
+                  Analytics.class, Crashes.class);
 	}
 	
 	// Populate the data for the movie
